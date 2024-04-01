@@ -8,7 +8,8 @@ The solution proceeds through the following steps:
 1. Retrieve movie reviews from the New York Times database for movies released between 01/01/2013 and 05/31/2023 containing the word "love" in the headline. Store the data in a Pandas dataframe.  
    There are 200 movies in the New York Times database that fit the search criteria, however, the New York Times only returns 10 results at a time. Therefore, a total of 20 calls to the New York Times database have to be made to retrieve all movie reviews.
 2. After normalizing the data, extract the titles of the movies retrieved from the New York Times from the `headline.main` column.
-   > [!Note]  
+
+   > [!Note]
    > I am using the following `Lambda` function, `lambda st: st[st.find("\u2018")+1:st.find("\u2019 ")]`, instead of the given `lambda st: st[st.find("\u2018")+1:st.find("\u2019 Review")]` since in this application it returns more valid titles.
 
    If present, remove trailing commas from the extracted titles. 
